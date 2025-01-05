@@ -8,10 +8,12 @@ Test cases can be run with the following:
 import os
 import logging
 from unittest import TestCase
+import json
 from tests.factories import AccountFactory
 from service.common import status  # HTTP Status Codes
 from service.models import db, Account, init_db
 from service.routes import app
+
 
 DATABASE_URI = os.getenv(
     "DATABASE_URI", "postgresql://postgres:postgres@localhost:5432/postgres"
